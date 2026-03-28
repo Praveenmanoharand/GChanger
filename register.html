@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Gchanger</title>
+    <link rel="icon" type="image/png" href="assets/images/123.png"  />
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <header1>
+        <img src="assets/images/logo1.png" alt="GChanger logo" class="logo1" width="100", height="100">
+    </header1>
+    <header>
+        <h2 class="logo">GChanger</h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Service</a>
+            <a href="help.html">Contact</a>
+            <button class="btnLogin-popup" onclick="location.href='login.html'">Login</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Register Form -->
+    <div id="registerForm" class="form">
+        <h2>Register</h2>
+    <form id="registerForm">
+        <span class="icon">
+            <ion-icon name="person"></ion-icon>
+        </span>
+        <input type="text" name="username" id="username" placeholder="Enter Username" required><br><br>
+        <span class="icon">
+            <ion-icon name="mail"></ion-icon>
+        </span>
+        <input type="email"  pattern="[a-z0-9._%+-]+@(gmail|outlook|yahoo)+\.[a-z]{2,}$" name="email" id="email" placeholder="Enter Email" required><br><br>
+        <span class="icon">
+            <ion-icon name="lock-closed"></ion-icon>
+        </span>
+        <input type="password" name="password" id="password" placeholder="Enter Password" required><br><br>
+        <button type="submit" id="registerBtn">Register</button>
+        <p>Already have an account? <span id="showLogin" onclick="location.href='login.html'">Login</span></p>
+                
+    </form>
+<!-- In your register.html -->
+<script>
+    document.getElementById('registerForm').addEventListener('submit', async (event) => {
+        event.preventDefault();
+    
+        const formData = {
+            username: document.getElementById('username').value.trim(),
+            email: document.getElementById('email').value.trim().toLowerCase(),
+            password: document.getElementById('password').value.trim()
+        };
+    
+        try {
+            const response = await fetch('http://localhost/gchanger/register.php', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(formData)
+            });
+    
+            const result = await response.json();
+            
+            if (result.success) {
+                alert(result.message);
+                if (result.redirect) {
+                    window.location.href = result.redirect;
+                }
+            } else {
+                alert(`Error: ${result.message}`);
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Registration failed. Please try again.');
+        }
+    });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About GChanger</title>
+    <link rel="icon" type="image/png" href="assets/images/123.png"  />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #a7d8f5, #ffffff);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            inline-size: 80%;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #fff;
+            text-shadow: 3px 3px 15px rgba(0,0,0,0.3);
+        }
+        .about-item {
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            margin: 20px 0;
+            transition: 0.3s;
+        }
+        .about-item:hover {
+            background: #e3e4e6;
+            transform: translateY(-5px);
+        }
+        .btn {
+            display: inline-block;
+            margin-block-start: 20px;
+            padding: 12px 30px;
+            background: #ff6b6b;
+            color: white;
+            text-decoration: none;
+            font-size: 1.3em;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #d43f3f;
+            transform: scale(1.05);
+        }
+
+        header {
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header {
+    position: fixed;
+
+}
+
+.logo1{
+    display: flex;
+    margin-inline-end: 5px;
+    margin-block-start: 20px;
+    padding: 5px 5px;
+    font-size: 2em;
+    color:rgba(31, 23, 71, 0.89);
+    border: 5px black;
+    user-select: none;
+}
+
+.logo {
+    font-size: 2em;
+    color: #004d7a;
+    user-select: none;
+}
+
+
+/* Logo Animation */
+@keyframes wavePulse {
+    0% { transform: scale(1); filter: hue-rotate(0deg); }
+    50% { transform: scale(1.1); filter: hue-rotate(180deg); }
+    100% { transform: scale(1); filter: hue-rotate(360deg); }
+}
+
+.logo1 {
+    inline-size: 100px;
+    animation: wavePulse 2s infinite alternate ease-in-out;
+}
+    </style>
+</head>
+<body>
+
+    <header1>
+        <img src="assets/images/logo1.png" alt="GChanger logo" class="logo1" width="100", height="100">
+    </header1>
+    
+
+    <h1>About GChanger</h1>
+    <div class="container">
+        <div class="about-item">
+            <h2>What is GChanger?</h2>
+            <p>GChanger is an advanced grammar correction platform that helps users improve their English by providing real-time grammar corrections, chat support, and mistake tracking.</p>
+            <h3>Chatbot</h3>
+            <p>The Chatbot Page in the GChanger platform provides real-time grammar assistance, helping users refine their writing through instant corrections. Integrated into a responsive web interface, it ensures smooth interaction and easy navigation across platform features.</p>
+            <h3>Chat</h3>
+            <P>The GChanger Communication & Grammar System is an interactive web-based platform designed to provide users with a seamless, real-time communication experience while ensuring grammatical accuracy. The system integrates three core functionalities: user authentication, real-time chat, and grammar correction. This allows users to engage in conversations while automatically receiving suggestions to enhance their writing quality.</P>
+            <h3>grammar corrector</h3>
+            <P>The Grammar Corrector Module is an essential component of the GChanger Communication System, designed to automatically analyze and correct grammatical mistakes in user messages. This module plays a crucial role in ensuring that users communicate effectively while maintaining proper grammar, spelling, and sentence structure. The system processes user input, applies necessary corrections, and returns an improved version of the message in real time.</P>
+            <h3>Mistake Tracker</h3>
+            <p>The Grammar Mistake Tracker is a web-based application designed to help users identify and correct grammatical mistakes in their text. Users can input text, and the system processes it to detect grammar issues and provide corrected versions.</p>
+
+        </div>
+        <div class="about-item">
+            <h2>Our Features</h2>
+            <p>GChanger offers a chatbot, a chatting page, a grammar corrector, and a mistake tracker to help users enhance their language skills.</p>
+        </div>
+        <div class="about-item">
+            <h2>Why Choose GChanger?</h2>
+            <p>We provide AI-powered grammar corrections, an intuitive user interface, and an engaging experience for language learners of all levels.</p>
+        </div>
+    </div>
+    <a href="welcome.html" class="btn">Go to Home</a>
+</body>
+</html>
+
